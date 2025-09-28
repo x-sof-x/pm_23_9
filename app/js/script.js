@@ -4,6 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(btn);
 
   btn.addEventListener("click", () => {
-    alert("Кнопка працює!");
+    alert("Кнопка нпрацює!");
   });
 });
