@@ -6,15 +6,16 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync").create();
-
-// HTML → dist/
+const fileInclude = require("gulp-file-include");
 const htmlTask = () => {
   return src("app/index.html")
+   .pipe(fileInclude({
+      prefix: "@@",
+      basepath: "@file"
+    }))
     .pipe(dest("dist"))
     .pipe(browserSync.stream());
 };
-
-// SCSS → dist/css/style.min.css
 const scssTask = () => {
   return src("app/scss/*.scss")
     .pipe(sass().on("error", sass.logError))
@@ -23,8 +24,6 @@ const scssTask = () => {
     .pipe(dest("dist/css"))
     .pipe(browserSync.stream());
 };
-
-// JS → dist/js/main.min.js
 const jsTask = () => {
   return src("app/js/*.js")
     .pipe(concat("main.min.js"))
@@ -32,16 +31,12 @@ const jsTask = () => {
     .pipe(dest("dist/js"))
     .pipe(browserSync.stream());
 };
-
-// IMG → dist/imgs/
 const imgTask = () => {
   return src("app/img/**/*")
     .pipe(imagemin())
     .pipe(dest("dist/imgs"))
     .pipe(browserSync.stream());
 };
-
-// Сервер + watcher
 const serve = () => {
   browserSync.init({
     server: { baseDir: "dist" }
@@ -51,8 +46,6 @@ const serve = () => {
   watch("app/js/*.js", jsTask);
   watch("app/img/**/*", imgTask);
 };
-
-// Збірка
 exports.default = series(
   parallel(htmlTask, scssTask, jsTask, imgTask),
   serve
