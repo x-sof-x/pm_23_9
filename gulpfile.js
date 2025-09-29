@@ -16,6 +16,18 @@ const htmlTask = () => {
     .pipe(dest("dist"))
     .pipe(browserSync.stream());
 };
+const bootstrapCSS = () => {
+  return src("node_modules/bootstrap/dist/css/bootstrap.min.css")
+    .pipe(dest("dist/css"))
+    .pipe(browserSync.stream());
+};
+
+const bootstrapJS = () => {
+  return src("node_modules/bootstrap/dist/js/bootstrap.bundle.min.js")
+    .pipe(dest("dist/js"))
+    .pipe(browserSync.stream());
+};
+
 const scssTask = () => {
   return src("app/scss/*.scss")
     .pipe(sass().on("error", sass.logError))
@@ -32,10 +44,10 @@ const jsTask = () => {
     .pipe(browserSync.stream());
 };
 const imgTask = () => {
-  return src("app/img/**/*")
-    .pipe(imagemin())
-    .pipe(dest("dist/imgs"))
-    .pipe(browserSync.stream());
+    return src('app/img/**/*.{webp,png,jpg,jpeg}', {encoding: false})
+        
+        .pipe(dest('dist/img'))
+        .pipe(browserSync.stream());
 };
 const serve = () => {
   browserSync.init({
@@ -47,6 +59,6 @@ const serve = () => {
   watch("app/img/**/*", imgTask);
 };
 exports.default = series(
-  parallel(htmlTask, scssTask, jsTask, imgTask),
+  parallel(htmlTask, scssTask, jsTask, imgTask, bootstrapCSS, bootstrapJS),
   serve
 );

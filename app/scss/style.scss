@@ -1,20 +1,100 @@
 body {
-  background: #f0f8ff;
-  font-family: sans-serif;
-  padding: 40px;
+  font-family: Arial, sans-serif;
+  background: #fbfafa;
+  color: #333;
 }
 
-h1 {
-  color: #ff4081;
-  font-size: 3rem;
+.resume {
+  padding: 40px 0;
+}
+
+.left-col {
+  background: #f9f9f9;
   text-align: center;
+  padding: 0px;
+  margin-top: -65px;
+}
+.photo-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Жовті смужки */
+.yellow-block {
+    background-color: #FFD700;
+    width: 100%;
+    height: 80px; /* Змініть на 1cm якщо потрібно */
+    margin: 0px 0;
+}
+
+.name {
+  font-weight: 1000;
   text-transform: uppercase;
+  font-size: 65px;
+  margin-bottom: 5px;
+
+  .first {
+    font-weight: 400;
+  }
+  .last {
+    font-weight: 700;
+  }
+}
+ .name-divider {
+    width: 40px;
+    height: 2px;
+    background-color: #ffc107;
+  }
+.position {
+  margin-top: 12px;
+  margin-bottom: 30px;
+  font-size: 16px;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
 }
 
-p {
-  font-size: 1.2rem;
-  color: green;
-  text-align: center;
-  margin-top: 10px;
+h2 {
+   margin-top: 60px;
+  font-size:25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.education strong,
+.contact-info strong {
+   margin-top: 0px;
+  display: block;
+ 
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+.contact-info .contact-detail {
+  font-size: 12px;
+  color: #0e0000;
+  line-height: 1.4;
+}
+.resume-bg {
+  background-color: #e9ecef; // світло-сірий фон
+  min-height: 100vh;
+}
+
+.resume-card {
+  max-width: 960px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .resume-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+.gap-col {
+  width: 5%;
+}
+.gap-col2 {
+  width: 38%;
 }
