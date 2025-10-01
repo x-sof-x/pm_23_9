@@ -1,0 +1,43 @@
+.resume {
+  padding-top: 40px;
+padding-bottom: 0px;
+}
+
+.left-col {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 0px;
+  margin-top: -64px;
+}
+.photo-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.yellow-block {
+    background-color: #FFD700;
+    width: 100%;
+    height: 80px; 
+    margin: 0px 0;
+}
+
+.resume-card {
+  max-width: 960px;
+  margin: 0 auto;
+ padding: 40px ;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+  .resume-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+.gap-col {
+  width: 5%;
+}
+.gap-col2 {
+  width: 38%;
+}
