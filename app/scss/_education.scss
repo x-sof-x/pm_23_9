@@ -1,0 +1,6 @@
+@use "variables" as v;
+.education .uni-name {
+  font-family: v.$font-main;
+  font-weight: 400;
+  font-size: 13px;
+}
