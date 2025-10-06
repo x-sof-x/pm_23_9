@@ -1,0 +1,26 @@
+.hobbies .hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hobbies .hobby-icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.hobbies p {
+  font-size: 13px;
+  margin: 0;
+  color: #555;
+}
+

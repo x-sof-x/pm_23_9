@@ -1,9 +1,9 @@
-@use "variables" as v;
 .name {
   font-weight: 1000;
   text-transform: uppercase;
   font-size: 65px;
   margin-bottom: 5px;
+
   .first {
     font-weight: 400;
   }
@@ -11,16 +11,18 @@
     font-weight: 700;
   }
 }
+
  .name-divider {
     width: 40px;
     height: 2px;
-    background-color: v.$yellow-color;
+    background-color: #ffc107;
   }
+
 .position {
   margin-top: 12px;
   margin-bottom: 30px;
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: v.$text-color-light;
+  color: #555;
 }

@@ -1,9 +1,5 @@
-@use "experience";
-@use "layout";
-@use "hobbies";
-@use "about-me";
-@use "name-section";
-@use "education";
-@use "expertise";
-@use "variables" as v;
-@use "mixins" as m;
+@use "_base";
+@use "_layout";
+@use "_components";
+@use "_sections";
+@use "_head";
