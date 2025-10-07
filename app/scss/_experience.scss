@@ -1,4 +1,6 @@
 @use "variables" as v;
+@use "extend";
+@use "sass:math";
 // Демонстрація  математичних операцій
 .experience {
   margin-top: v.$base-margin * 4.25;; 
@@ -7,11 +9,11 @@
   margin-bottom:  v.$gap * 2.66;;
 }
 .job-header {
-  margin-bottom:  v.$gap / 3;
+  margin-bottom: math.div(v.$gap, 3);
 }
 .company-row {
-  display: flex;
-  align-items: center;
+@extend %flex-center;
+justify-content: left;
   gap: 10px; 
   margin-bottom: 8px;
 }

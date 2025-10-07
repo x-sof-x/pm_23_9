@@ -1,5 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
+@use "extend";
 .expertise h2 {
   margin-top: 70px; 
 }
@@ -19,9 +20,7 @@
   height: 80px;
   border-radius: 50%;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   font-size: 10px;
   font-weight: 300;
   line-height: 1.1;

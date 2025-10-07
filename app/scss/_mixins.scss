@@ -1,5 +1,5 @@
 @use "variables" as v;
-
+// Демонстрація міксінів в expertise.scss
 @mixin circle-gradient($percent, $start-angle: 135deg) {
   background: conic-gradient(from $start-angle, v.$yellow-color #{$percent}, v.$grey-color 0);
 }

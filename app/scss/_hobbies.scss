@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "extend";
 .hobbies { 
   padding: 45px;
   margin-top: -105px; 
@@ -11,12 +12,13 @@
    align-items: center;
     margin-bottom: 1rem;
     .hobby-icon {
-   width: 50px; height: 50px;
+   width: 50px; 
+   height: 50px;
    border: 2px solid v.$text-color;
    border-radius: 50%;
-   display: flex; justify-content: center; 
-   align-items: center;
-   font-size: 22px; color: v.$text-color;
+   @extend %flex-center;
+   font-size: 22px;
+    color: v.$text-color;
     margin-bottom: 0.5rem;
   } 
   
