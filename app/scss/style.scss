@@ -1,10 +1,6 @@
-@use "experience";
+@use "../components/main-content";
 @use "layout";
-@use "hobbies";
-@use "about-me";
-@use "name-section";
-@use "education";
-@use "expertise";
 @use "variables" as v;
 @use "mixins" as m;
 @use "extend";
+@use "../components/sidebar";

@@ -5,37 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
    <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.min.css">
 
 </head>
 <body class="resume-bg">
   <div class="container py-5">
-    <div class="resume-card bg-white shadow rounded p-4">
+    <div class="resume-card bg-white shadow rounded  ">
       <main class="resume">
-        <div class="row">
+        <div class="row ">
           <!-- Ліва колонка -->
-          <div class="gap-col d-none d-md-block"></div>
-          <div class="gap-col2 left-col">
-            @@include('html/left-column/photo-section.html')
-            @@include('html/left-column/about-me.html')
-            @@include('html/left-column/hobbies.html')
-</div>
-
+          
+         <div class="col-md-5 left-col ps-5">
+                            @@include('components/sidebar.html')
+                        </div>
           <!-- Права колонка -->
-          <div class="gap-col d-none d-md-block"></div>
-          <div class="col-md-6 right-col">
-            @@include('html/right-column/name-section.html')
-            @@include('html/right-column/contact-info.html')
-            @@include('html/right-column/education.html')
-           @@include('html/right-column/experience.html')
-           @@include('html/right-column/expertise.html')
+          <div class="col-md-7 right-col p-5 p-lg-5">
+            @@include('components/main-content.html')
           </div> 
         </div> 
       </main>
     </div> 
   </div> 
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 </html>

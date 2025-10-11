@@ -1,0 +1,56 @@
+@use "variables" as v;
+@use "extend";
+.about-me {
+  margin-top: 0px;         
+  padding: 45px;
+  background: v.$grey-color;      
+   text-align: left;
+}
+.about-me h2 {
+  margin-top: 0px;
+   font-size: 25px;
+   font-weight: 700;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+}
+.about-me p { 
+  font-family: v.$sub-font;
+  font-weight: 300;         
+  font-size: 13px;          
+  line-height: 1.8;        
+  color: v.$text-color-light;            
+  letter-spacing: 0.5px;   
+  margin-bottom: 0;
+   font-family: v.$font-main; 
+}
+.hobbies { 
+  border-top: 1px solid v.$grey-color;
+  padding:   0 45px 45px 45px;
+  margin-top: 0px; 
+  text-align: left; background: v.$grey-color;
+  margin-bottom: 0px; 
+  border-bottom: 16px solid v.$yellow-color; 
+   .hobby-item { 
+  display: flex;
+   flex-direction: column; 
+   align-items: center;
+    margin-bottom: 1rem;
+    .hobby-icon {
+   width: 25px; 
+   height: 25px;
+   border: 2px solid v.$text-color;
+   border-radius: 50%;
+   @extend %flex-center;
+   font-size: 15px;
+    color: v.$text-color;
+    margin-bottom: 0.5rem;
+  } 
+  
+  } 
+  p {
+   font-size: 13px;
+    margin: 0; color: v.$text-color-light;
+             } 
+ }
+
+ 

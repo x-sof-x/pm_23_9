@@ -1,13 +1,13 @@
 @use "variables" as v;
 .resume {
-  padding-top: 40px;
+  padding-top: 0px;
 padding-bottom: 0px;
 }
 .left-col {
   background: v.$white-color;
   text-align: center;
   padding: 0px;
-  margin-top: -64px;
+  margin-top: 0px;
 }
 .photo-box img {
     width: 100%;
@@ -17,13 +17,13 @@ padding-bottom: 0px;
 .yellow-block {
     background-color: v.$yellow-color;
     width: 100%;
-    height: 80px; 
+    height: 60px; 
     margin: 0px 0;
 }
 .resume-card {
   max-width: 960px;
   margin: 0 auto;
- padding: 40px ;
+ padding: 0px ;
   background: v.$white-color;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -33,12 +33,6 @@ padding-bottom: 0px;
     padding: 20px;
     max-width: 100%;
   }
-}
-.gap-col {
-  width: 5%;
-}
-.gap-col2 {
-  width: 38%;
 }
 body {
   font-family: Arial, sans-serif;
