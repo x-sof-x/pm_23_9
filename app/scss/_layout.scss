@@ -3,16 +3,26 @@
   padding-top: 0px;
 padding-bottom: 0px;
 }
-.left-col {
-  background: v.$white-color;
-  text-align: center;
-  padding: 0px;
-  margin-top: 0px;
+.left-col-bg {
+  background-color: #ebe9e9; /* сірий фон */
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 20px solid gold; /* золота лінія внизу */
 }
+
+.photo-box {
+  margin: 0;
+  padding: 0;
+}
+
 .photo-box img {
-    width: 100%;
-    height: auto;
-    display: block;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 .yellow-block {
     background-color: v.$yellow-color;
@@ -49,4 +59,28 @@ h2 {
 .resume-bg {
   background-color: v.$resume-bg-color; 
   min-height: 100vh;
+}
+.block-content {
+    display: none;       /* спочатку прихований */
+    margin-top: 10px;
+}
+
+.block-content.active {
+    display: flex;       /* flex, щоб колонки залишались горизонтально */
+}
+
+.arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    float: right;        /* стрілка справа */
+}
+
+.arrow.rotate {
+    transform: rotate(180deg); /* обертання стрілки */
+}
+
+.contact-info h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
