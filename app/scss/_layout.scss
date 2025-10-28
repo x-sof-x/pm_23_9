@@ -4,19 +4,18 @@
 padding-bottom: 0px;
 }
 .left-col-bg {
-  background-color: #ebe9e9; /* сірий фон */
+  background-color: v.$grey-color; 
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 20px solid gold; /* золота лінія внизу */
+  border-bottom: 20px solid v.$yellow-color; 
 }
-
 .photo-box {
+  position: relative;
   margin: 0;
   padding: 0;
 }
-
 .photo-box img {
   display: block;
   width: 100%;
@@ -60,25 +59,21 @@ h2 {
   background-color: v.$resume-bg-color; 
   min-height: 100vh;
 }
-.block-content {
-    display: none;       /* спочатку прихований */
+.block-content {  // поки прихований контент
+    display: none;      
     margin-top: 10px;
 }
-
-.block-content.active {
-    display: flex;       /* flex, щоб колонки залишались горизонтально */
+.block-content.active { // щоб колонки горизонтально відображались
+    display: flex;      
 }
-
 .arrow {
     cursor: pointer;
     transition: transform 0.3s ease;
-    float: right;        /* стрілка справа */
+    float: right;       
 }
-
 .arrow.rotate {
-    transform: rotate(180deg); /* обертання стрілки */
+    transform: rotate(180deg); 
 }
-
 .contact-info h2 {
     display: flex;
     justify-content: space-between;
