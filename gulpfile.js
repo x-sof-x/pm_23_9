@@ -36,6 +36,12 @@ const scssTask = () => {
     .pipe(dest("dist/css"))
     .pipe(browserSync.stream());
 };
+const jsonTask = () => {
+  return src("app/data.json")  // де лежить твій JSON
+    .pipe(dest("dist"))
+    .pipe(browserSync.stream());
+};
+
 const jsTask = () => {
   return src("app/js/*.js")
     .pipe(concat("main.min.js"))
@@ -59,6 +65,6 @@ const serve = () => {
   watch("app/img/**/*", imgTask);
 };
 exports.default = series(
-  parallel(htmlTask, scssTask, jsTask, imgTask, bootstrapCSS, bootstrapJS),
+  parallel(htmlTask, scssTask, jsTask, imgTask, bootstrapCSS, bootstrapJS, jsonTask),
   serve
 );

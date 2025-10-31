@@ -1,0 +1,29 @@
+{
+  "person": {
+    "firstName": "JHON",
+    "lastName": "ABIRAR",
+    "position": "Front-End Developer",
+    "email": "jhon.abirar@example.com",
+    "phone": "+380 67 123 4567"
+  },
+  "experience": [
+    {
+      "title": "Enter Job Position Here",
+      "company": "Company Name / Location",
+      "date": "Present",
+      "description": "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    },
+    {
+      "title": "Enter Job Position Here",
+      "company": "Company Name / Location",
+      "date": "2017 - 2019",
+      "description": "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    },
+    {
+      "title": "Enter Job Position Here",
+      "company": "Company Name / Location",
+      "date": "2015 - 2017",
+      "description": "Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    }
+  ]
+}
